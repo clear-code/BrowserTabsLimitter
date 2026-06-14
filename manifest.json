@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Limiter",
+  "version": "1.0",
+  "permissions": [
+    "tabs"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  }
+}
