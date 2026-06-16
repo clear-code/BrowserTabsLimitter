@@ -6,5 +6,7 @@ button.addEventListener("click", async () => {
     maxTabs
   });
 
-  alert("保存しました");
+  setTimeout(() => {
+    window.close();
+  }, 1000);
 });
