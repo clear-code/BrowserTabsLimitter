@@ -1,11 +1,12 @@
-const MAX_TABS = 5;
-
 chrome.tabs.onCreated.addListener(async (tab) => {
+
+  const { maxTabs = 5 } = await chrome.storage.sync.get("maxTabs");
+
   const tabs = await chrome.tabs.query({
     windowId: tab.windowId
   });
-
-  if (tabs.length > MAX_TABS) {
+  
+  if (tabs.length > maxTabs) {
     await chrome.tabs.remove(tab.id);
   }
 });
