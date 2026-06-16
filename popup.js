@@ -6,6 +6,8 @@ button.addEventListener("click", async () => {
     maxTabs
   });
 
+  document.getElementById("message").textContent = "保存しました";
+
   setTimeout(() => {
     window.close();
   }, 1000);
